@@ -1,0 +1,206 @@
+:root{
+    --main-color: #2196f3;
+    --main-hover:#fafafa;
+    --main-header:rgb(1, 1, 58);
+    --main-paragraph:#777;
+}
+*{
+    /* box sizing in all elements  watch it in css course elzero web  */
+    -webkit-box-sizing : border-box ;
+    -moz-box-sizing : border-box ;
+     box-sizing: border-box;
+     margin :0;
+     padding :0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Work Sans', sans-serif ;
+    background-color: rgb(236, 232, 232);
+}
+
+/* start header*/
+.header{
+    background-color: rgb(250, 251, 255);
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 10px 20px 0 rgb(5 16 44 / 15%);
+    z-index: 1;
+  }
+.collapse { 
+    display: flex;
+    justify-content: flex-end;
+}
+.container {
+    padding: 0;
+    position: relative;
+    
+}
+.container .container-fluid {
+    background-color: rgb(250, 251, 255);
+}
+.container .navbar{
+    background-color: rgb(250, 251, 255);
+}
+.container .navbar .container-fluid >a {
+    font-weight: 900;
+    color: var(--main-color);
+} 
+.container nav {
+    padding: 0px;
+    height: 90px;
+}
+.container .navbar .navbar-nav>li{
+    position: relative;
+}
+.container .navbar .navbar-nav >li > a {
+   font-weight: 600;
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 30px;
+    z-index: 1;
+    transition: 0.3s;
+    height: 90px;
+}
+.container .navbar .navbar-nav >li > a:hover {
+   color: var(--main-color);
+}
+.container .navbar .navbar-nav >li > a::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0;
+    background-color: rgb(233, 239, 250);
+    z-index: -1;
+    left: 0;
+    top: 0;
+    transition: 0.3s;
+}
+.container .navbar .navbar-nav >li > a:hover:before {
+    width: 100%;
+}
+.container .navbar .navbar-nav >li::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 4px;
+    background-color: var(--main-color);
+    z-index: 1;
+    top: 0;
+    left: 0;
+    transition: 0.3s;
+}
+.container .navbar .navbar-nav >li:hover::after{
+    width: 100%;
+}
+/* end header*/
+/* strat personnal info*/
+.profile{
+    background-color: white;
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 0 10px 20px 0 rgb(5 16 44 / 15%);
+}
+.profile .row img{
+    border-radius: 50% ;
+    top: -35px;
+    /* border:16px solid white; */
+    background-color: white;
+    width:160px;
+}
+/* .profile .col .info {
+    border-right: 1px solid #cecaca;
+} */
+.profile .row .info h3{
+    color: var(--main-header);
+    text-align: center;
+}
+/* .profile .col .info h3::after{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 80px;
+    left: 500px;
+    background-color:#cecaca
+} */
+.profile .row .info p{
+color: var(--main-paragraph);
+text-align: center;
+}
+    .profile .per-info .box i{
+        font-size: 20px;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        background-color: black;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        color: white;
+        margin: 0 auto 15px;
+    }
+    .profile .per-info h4{
+        font-size: 18px;
+        color: var(--main-header);
+        text-align: center;
+    }
+    .profile .per-info p{
+        font-size: 15px;
+        text-align: center;
+        color: var(--main-paragraph);
+    }
+   .profile .info_ride h4{
+       font-size: 18px;
+       color: var(--main-header);
+       text-align: center;
+   }
+   .profile .info_ride p{
+       font-size: 15px;
+      text-align: center;
+      color: var(--main-paragraph);
+   }
+   .profile .info_ride .box i{
+       font-size: 20px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: white;
+    margin: 0 auto 15px;
+   }
+    /* end personnal info */
+    /* start car info */
+    .car-info{
+        background-color: white;
+        border-radius: 15px 15px 15px 15px;
+        box-shadow: 0 10px 20px 0 rgb(5 16 44 / 15%);
+    }
+    .car-info .row img{
+        border-radius: 50%;
+        
+        top: -30px;
+        /* border:16px solid white; */
+    background-color: white;
+    width:160px;
+    }
+    .car-info .box  i{
+        font-size: 20px;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        background-color: black;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        color: white;
+        margin: 0 auto 15px;
+    }
+    .car-info .box h4{
+        font-size: 18px;
+       color: var(--main-header);
+       text-align: center;
+    }
+    /* end car info */
